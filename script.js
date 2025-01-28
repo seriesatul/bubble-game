@@ -1,4 +1,4 @@
-var timer = 11;
+var timer = 10;
 var score = 0;
 var hitrn
 
@@ -36,7 +36,10 @@ function runTimer(){
     }
     else{
         clearInterval(timerinterval);
-        document.querySelector("#pbottom").innerHTML = `<h1>Game Over <br> Your Score is ${score}</h1>`
+        document.querySelector("#pbottom").innerHTML = `<h1>Game Over <br> Your Score is ${score}</h1> <br> <button onclick="reload()" id="btn">Restart</button>`;
+        document.querySelector("#btn").addEventListener("click",function(){
+            location.reload()
+        })
     }
     
  },1000)
@@ -45,7 +48,7 @@ function runTimer(){
 document.querySelector("#pbottom").addEventListener("click",function(dets){
     var clickedNum = Number(dets.target.textContent)
     if(clickedNum == hitrn){
-        timer=11;
+        timer=10;
         increaseScore()
         bubble()
         getNewHit()
@@ -53,10 +56,13 @@ document.querySelector("#pbottom").addEventListener("click",function(dets){
     }
    else{
 
-    timer =0;
+    timer = 0;
     document.querySelector("#timervalue").textContent=timer;
     
-    document.querySelector("#pbottom").innerHTML = `<h1>Game Over <br> Your Score is ${score}</h1>`
+    document.querySelector("#pbottom").innerHTML = `<h1>Game Over <br> Your Score is ${score}</h1> <br> <button onclick="reload()" id="btn">Restart</button>`;
+    document.querySelector("#btn").addEventListener("click",function(){
+        location.reload()
+    })
 
     }
 })

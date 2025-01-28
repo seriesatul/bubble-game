@@ -87,4 +87,15 @@ html,body{
     background-color:  rgb(3, 90, 166);
 }
 
+#btn{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 40px;
+    width: 100px;
+    color: white;
+    border: none;
+    background-color: rgb(84, 175, 255); 
+    border-radius: 50px;
+    padding: 10px;
+}
+
 
